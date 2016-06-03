@@ -20,6 +20,14 @@ location.href=urllive;
 return false;
 }
 </script>
+<script>
+function main()
+{
+var urlimg="http://images.costcobusinessdelivery.com/image/media/350-" + document.getElementById("urlimg").value + "__1.jpg";
+location.href=urlimg;
+return false;
+}
+</script>
 <style>
 body {
 	font-family: 'Lato', sans-serif;
@@ -102,6 +110,14 @@ Item Number: <input type="text" name="url" id="url"> <input type="submit" value=
 <p>LIVE SITE ITEM</p>
 <form onSubmit="return main();">
 Item Number: <input type="text" name="urllive" id="urllive"> <input type="submit" value="Go" class="button">
+</form>
+</div>
+</div>
+<div class="livesearch">
+<div class="center">
+<p>PRODUCT IMAGE</p>
+<form onSubmit="return main();">
+Item Number: <input type="text" name="urlimg" id="urlimg"> <input type="submit" value="Go" class="button">
 </form>
 </div>
 </div>
