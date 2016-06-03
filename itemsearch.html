@@ -32,12 +32,14 @@ return false;
 body {
 	font-family: 'Lato', sans-serif;
 	background: #efefef;
+	color: #3B3B3B;
 }
 p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-size: 20px;
 }
+
 .button {
 	    background-color: #305c82;
     border: none;
@@ -49,6 +51,11 @@ p {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.20);
+}
+.button:hover {
+	box-shadow: 0px 3px 3px rgba(0,0,0,0);
 }
 .center {
 
@@ -69,8 +76,9 @@ p {
 	padding-top: 2px;
 	background: #fff;
 	width: 500px;
-	height: 100px;
-	border-radius: 8px;
+	height: 115px;
+	border-radius: 4px;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.20);
 }
 .logo {
 	width: 100%;
@@ -97,7 +105,7 @@ p {
 <div class="title">Go To Item</div>
 <div class="subtitle">This tool is designed to access any item on the Business Center website even if it isn't showing up in the search.</div>
 </div>
-<div class="stagesearch">
+<div class="livesearch">
 	<div class="center">
 <p>STAGING ITEM</p>
 <form onSubmit="return process();">
