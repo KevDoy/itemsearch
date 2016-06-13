@@ -21,14 +21,14 @@ return false;
 }
 </script>
 <script>
-function main()
+function imglive()
 {
 var urlimg="http://images.costcobusinessdelivery.com/image/media/500-" + document.getElementById("urlimg").value + "__1.jpg";
 location.href=urlimg;
 return false;
 }
 </script><script>
-function main()
+function googsearch()
 {
 var urlgoogle="https://www.google.com/search?q=site%3Acostcobusinessdelivery.com%20" + document.getElementById("urlgoogle").value;
 location.href=urlgoogle;
@@ -132,7 +132,7 @@ Item Number: <input type="text" name="urllive" id="urllive"> <input type="submit
 <div class="livesearch">
 <div class="center">
 <p>PRODUCT IMAGE LIVE?</p>
-<form onSubmit="return main();">
+<form onSubmit="return imglive();">
 Item Number: <input type="text" name="urlimg" id="urlimg"> <input type="submit" value="Go" class="button">
 </form>
 </div>
@@ -140,7 +140,7 @@ Item Number: <input type="text" name="urlimg" id="urlimg"> <input type="submit" 
 <div class="livesearch">
 <div class="center">
 <p>SITE WIDE SEARCH</p>
-<form onSubmit="return main();">
+<form onSubmit="return googsearch();">
 Search Term: <input type="text" name="urlgoogle" id="urlgoogle"> <input type="submit" value="Go" class="button">
 </form>
 </div>
