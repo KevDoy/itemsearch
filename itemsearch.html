@@ -27,6 +27,13 @@ var urlimg="http://images.costcobusinessdelivery.com/image/media/500-" + documen
 location.href=urlimg;
 return false;
 }
+</script><script>
+function main()
+{
+var urlimg="https://www.google.com/search?q=site%3Acostcobusinessdelivery.com%20" + document.getElementById("urlgoogle").value;
+location.href=urlimg;
+return false;
+}
 </script>
 <style>
 body {
@@ -103,7 +110,7 @@ p {
 <body>
 <div class="head">
 <img width="30%" src="http://www.costcobusinessdelivery.com/wcsstore/CostcoGLOBALSAS/images/BusinessCenterOutline_214x65.png" style="margin: 0 auto;">
-<div class="title">Go To Item</div>
+<div class="title">UNIVERSAL ITEM SEARCH</div>
 <div class="subtitle"></div>
 </div>
 <div class="livesearch">
@@ -124,9 +131,17 @@ Item Number: <input type="text" name="urllive" id="urllive"> <input type="submit
 </div>
 <div class="livesearch">
 <div class="center">
-<p>PRODUCT IMAGE</p>
+<p>PRODUCT IMAGE LIVE?</p>
 <form onSubmit="return main();">
 Item Number: <input type="text" name="urlimg" id="urlimg"> <input type="submit" value="Go" class="button">
+</form>
+</div>
+</div>
+<div class="livesearch">
+<div class="center">
+<p>SITE WIDE SEARCH</p>
+<form onSubmit="return main();">
+Search Term: <input type="text" name="urlgoogle" id="urlgoogle"> <input type="submit" value="Go" class="button">
 </form>
 </div>
 </div>
