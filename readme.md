@@ -6,4 +6,4 @@ The newest feature allows web content team members to search product images that
 See it in action: https://business-delivery.github.io/itemsearch/itemsearch.html
 
 ## Credit
-Coded by @KevDoy (for Business-Delivery)
+Coded by Kevin Doyle (github: @KevDoy) for @Business-Delivery
