@@ -24,7 +24,7 @@ return false;
 <script>
 function imglive()
 {
-var urlimg="https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeId=739&itemId=" + document.getElementById("urlimg").value;
+var urlimg="https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeId=739&itemId=" + document.getElementById("urlimg").value + "&viewId=" + document.getElementById("viewid").value;
 location.href=urlimg;
 return false;
 }
@@ -118,6 +118,7 @@ input {
 	float:clear;
 	
 }
+
 </style>
 </head>
 <body>
@@ -146,7 +147,13 @@ Item <input type="text" name="urllive" id="urllive"> <input type="submit" value=
 <div class="center">
 <p>PRODUCT IMAGE</p>
 <form onSubmit="return imglive();">
-Item <input type="text" name="urlimg" id="urlimg"> <input type="submit" value="search" class="material-icons button">
+Item <input type="text" name="urlimg" id="urlimg">
+<select id="viewid">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+<input type="submit" value="search" class="material-icons button"> 
 </form>
 </div>
 </div>
