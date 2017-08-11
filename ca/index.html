@@ -1,0 +1,168 @@
+<head>
+<title>BD Search & Information Hub</title>
+<link href='https://fonts.googleapis.com/css?family=Comfortaa|Lato:400,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" 
+      type="image/png" 
+      href="../img/logo.png">
+<script>
+function process()
+{
+var url="http://bd-stage.ecom.costco.ca/.product." + document.getElementById("url").value + ".html";
+location.href=url;
+return false;
+}
+</script>
+<script>
+function main()
+{
+var urllive="http://www.costcobusinesscentre.ca/.product." + document.getElementById("urllive").value + ".html";
+location.href=urllive;
+return false;
+}
+</script>
+<script>
+function imglive()
+{
+var urlimg="https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12027981&recipeId=738&itemId=" + document.getElementById("urlimg").value + "&viewId=" + document.getElementById("viewid").value;
+location.href=urlimg;
+return false;
+}
+</script><script>
+function googsearch()
+{
+var urlgoogle="https://www.google.com/search?q=site%3Acostcobusinesscentre.ca%20" + document.getElementById("urlgoogle").value;
+location.href=urlgoogle;
+return false;
+}
+</script>
+<style>
+body {
+	font-family: 'Lato', sans-serif;
+	background: #efefef;
+	color: #3B3B3B;
+}
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.button {
+	    background-color: #305c82;
+    border: none;
+    color: white;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 100px;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.20);
+}
+.button:hover {
+	box-shadow: 0px 3px 3px rgba(0,0,0,0);
+	transform: translateY(2px);
+}
+
+input {
+	border: none;
+	background-color: #E2E2E2;
+	height: 25px;
+	border-radius: 100px;
+	padding: 5px 10px;
+	
+}
+
+.center {
+
+	text-align: center;
+}
+.stagesearch {
+	padding-top: 1px;
+	background: #fff;
+	width: 500px;
+	height: 100px;
+	border-radius: 8px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.livesearch {
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 2px;
+	background: #fff;
+	width: 500px;
+	height: 115px;
+	border-radius: 10px;
+	/* box-shadow: 0px 3px 3px rgba(0,0,0,0.20); */
+}
+.logo {
+	width: 100%;
+}
+.head {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 500px;
+	
+}
+.title {
+	font-size: 30px;
+	margin: 10px 0 0 0;
+}
+.subtitle {
+	display: block;
+	float:clear;
+	
+}
+
+</style>
+</head>
+<body>
+<div class="head">
+
+<div class="title"><img width="10%" src="../img/logo.png" style="margin: 0 auto; vertical-align: middle"> Search &amp; Information Hub</div>
+<div class="subtitle"></div>
+</div>
+<div class="livesearch">
+	<div class="center">
+<p>STAGING SITE</p>
+<form onSubmit="return process();">
+Item <input type="text" name="url" id="url"> <input type="submit" value="search" class="material-icons button">
+</form>
+</div>
+</div>
+<div class="livesearch">
+<div class="center">
+<p>LIVE SITE</p>
+<form onSubmit="return main();">
+Item <input type="text" name="urllive" id="urllive"> <input type="submit" value="search" class="material-icons button">
+</form>
+</div>
+</div>
+<div class="livesearch">
+<div class="center">
+<p>PRODUCT IMAGE</p>
+<form onSubmit="return imglive();">
+Item <input type="text" name="urlimg" id="urlimg" style="width: 105px;">
+<select id="viewid">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+<input type="submit" value="search" class="material-icons button"> 
+</form>
+</div>
+</div>
+<div class="livesearch">
+<div class="center">
+<p>SITE WIDE SEARCH</p>
+<p style="font-size: 10px; margin-top: -20px">Powered by Google</p>
+<form onSubmit="return googsearch();">
+Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"> <input type="submit" value="search" class="material-icons button">
+</form>
+</div>
+</div>
+</body>
