@@ -1,3 +1,4 @@
+<html>
 <head>
 <title>BD Search & Information Hub</title>
 <link href='https://fonts.googleapis.com/css?family=Comfortaa|Lato:400,900' rel='stylesheet' type='text/css'>
@@ -5,6 +6,8 @@
 <link rel="icon" 
       type="image/png" 
       href="img/logo.png">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script>
 function process()
 {
@@ -25,7 +28,7 @@ return false;
 function imglive()
 {
 var urlimg="https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeId=739&itemId=" + document.getElementById("urlimg").value + "&viewId=" + document.getElementById("viewid").value;
-location.href=urlimg;
+$("#inlineimg").attr("src", urlimg);
 return false;
 }
 </script><script>
@@ -111,14 +114,17 @@ input {
 .title {
 	font-size: 30px;
 	margin: 10px 0 0 0;
-	color: #white;
 }
 .subtitle {
 	display: block;
 	float:clear;
-	
 }
-
+	.products {
+		height: 475px;
+	}
+	#inlineimg {
+		background-image: url("https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png");
+	}
 </style>
 </head>
 <body>
@@ -143,7 +149,7 @@ Item <input type="text" name="urllive" id="urllive"> <input type="submit" value=
 </form>
 </div>
 </div>
-<div class="livesearch">
+<div class="livesearch products">
 <div class="center">
 <p>PRODUCT IMAGE</p>
 <form onSubmit="return imglive();">
@@ -157,6 +163,7 @@ Item <input type="text" name="urlimg" id="urlimg" style="width: 105px;">
 </select>
 <input type="submit" value="search" class="material-icons button"> 
 </form>
+<img src="https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png" width="350px" id="inlineimg">
 </div>
 </div>
 <div class="livesearch">
@@ -175,3 +182,4 @@ Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"
 </div>
 </div>
 </body>
+</html>
