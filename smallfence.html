@@ -1,8 +1,8 @@
 <script>
-function googsearch()
+function smallfence()
 {
-document.getElementById("bold").innerHTML = document.getElementById("urlgoogle2").value;
-document.getElementById("normal").innerHTML = document.getElementById("urlgoogle").value;
+document.getElementById("bold").innerHTML = document.getElementById("sf2").value;
+document.getElementById("normal").innerHTML = document.getElementById("sf1").value;
 return false;
 }
 </script>
@@ -12,10 +12,10 @@ return false;
 <div class="livesearch">
 <div class="center">
 <p>Small Fence Spacing Check</p>
-<form onSubmit="return googsearch();">
-<input type="text" name="urlgoogle2" id="urlgoogle2" value="Bold" style="width: 130px;">
+<form onSubmit="return smallfence();">
+<input type="text" name="sf2" id="sf2" value="Bold" style="width: 130px;">
 <br>
-<input type="text" name="urlgoogle" id="urlgoogle" value="Normal" style="width: 130px;"> <input type="submit" value="Test" class="material-icons button">
+<input type="text" name="sf1" id="sf1" value="Normal" style="width: 130px;"> <input type="submit" value="Test" class="material-icons button">
 </form>
 </div>
 </div>

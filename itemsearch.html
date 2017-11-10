@@ -38,12 +38,20 @@ var urlgoogle="https://www.google.com/search?q=site%3Acostcobusinessdelivery.com
 location.href=urlgoogle;
 return false;
 }
+</script><script>
+function smallfence()
+{
+document.getElementById("bold").innerHTML = document.getElementById("sf2").value;
+document.getElementById("normal").innerHTML = document.getElementById("sf1").value;
+return false;
+}
 </script>
 <style>
 body {
 	font-family: 'Lato', sans-serif;
 	background: #efefef;
 	color: #3B3B3B;
+	min-width: 700px;
 }
 p {
 	font-family: 'Lato', sans-serif;
@@ -94,12 +102,15 @@ input {
 }
 .livesearch {
 	margin: 0 auto;
+	margin-right: 20px;
 	margin-top: 20px;
 	padding-top: 2px;
 	background: #fff;
 	width: 500px;
-	height: 115px;
+	min-height: 500px;
 	border-radius: 10px;
+	display: inline-block;
+	float: left;
 	/* box-shadow: 0px 3px 3px rgba(0,0,0,0.20); */
 }
 .logo {
@@ -107,9 +118,7 @@ input {
 }
 .head {
 	margin: 0 auto;
-	margin-top: 20px;
-	width: 500px;
-	
+	width: 25em;
 }
 .title {
 	font-size: 30px;
@@ -127,12 +136,9 @@ input {
 	}
 </style>
 </head>
-<body>
-<div class="head">
-
-<div class="title"><img width="10%" src="img/logo.png" style="margin: 0 auto; vertical-align: middle"> Search &amp; Information Hub</div>
-<div class="subtitle"></div>
-</div>
+<body style="width: 100%;">
+<div style="width: 75%; height: 100%;margin: 0 auto;">
+<div class="title"><img width="5%" src="img/logo.png" style="margin: 0 auto; vertical-align: middle"> Search &amp; Information Hub</div>
 <div class="livesearch products">
 <div class="center">
 <p>PRODUCT IMAGE</p>
@@ -156,18 +162,10 @@ Item <input type="text" name="urlimg" id="urlimg" style="width: 105px;" autofocu
 <form onSubmit="return process();">
 Item <input type="text" name="url" id="url"> <input type="submit" value="search" class="material-icons button">
 </form>
-</div>
-</div>
-<div class="livesearch">
-<div class="center">
 <p>LIVE SITE</p>
 <form onSubmit="return main();">
 Item <input type="text" name="urllive" id="urllive"> <input type="submit" value="search" class="material-icons button">
 </form>
-</div>
-</div>
-<div class="livesearch">
-<div class="center">
 <p>SITE WIDE SEARCH</p>
 <p style="font-size: 10px; margin-top: -20px">Powered by Google</p>
 <form onSubmit="return googsearch();">
@@ -181,5 +179,35 @@ Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"
 <a href="https://github.com/Business-Delivery/thin-mints"><div class="button" style="padding-bottom: 6px;"> Information & Download</div></a>
 </div>
 </div>
+<div class="livesearch">
+<div class="center">
+<p>SMALL FENCE SPACING</p>
+<form onSubmit="return smallfence();">
+<input type="text" name="sf2" id="sf2" value="Bold" style="width: 130px;">
+<br><br>
+<input type="text" name="sf1" id="sf1" value="Normal" style="width: 130px;"><br><input type="submit" value="Test" class="button">
+</form>
+</div>
+
+
+
+<div style="font-family: Helvetica, Trebuchet MS, Ubuntu, Verdana, sans-serif; margin: 0 0 0 140px">
+  <div class="smallfc" style="width:212px; height: 212px;"> <!-- Height = 212 for 1 line of text; Height = 231 for 2 lines of text -->
+      <img src="https://www.costcobusinessdelivery.com/wcsstore/USBD/Homepage/FY_18/p03/sf-110617-chocolatechips.png" width="212px" alt="Bake with Chocolate">
+      <div style="height: 50px; width: 195px; margin-left: 8px">
+        <span style="font-size:16px;">
+			<strong><span id="bold">Bold</span></strong> <span style="display: linline" id="normal">Normal</span>
+        </span>
+        <br>
+        <div style="background: #007fb4; width:100px; height: 25px; font-size:13px; font-weight:bold; color:#fff; text-align: center; float: right; margin-top: 2px;" class="buttonstyle" lang="x-buttonstyle">
+          <div style="padding-top: 5.25px;">
+            Shop Now &#10095;
+          </div>
+        </div>
+      </div>
+  </div>
+</div></div>
+
+	</div>
 </body>
 </html>
