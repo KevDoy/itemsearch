@@ -6,6 +6,9 @@
 <link rel="icon" 
       type="image/png" 
       href="img/logo.png">
+<meta content="True" name="HandheldFriendly">
+<meta content="320" name="MobileOptimized">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
@@ -103,10 +106,11 @@ input {
 .livesearch {
 	margin: 0 auto;
 	margin-right: 20px;
+	margin-left: 5%;
 	margin-top: 20px;
 	padding-top: 2px;
 	background: #fff;
-	width: 500px;
+	width: 40%;
 	min-height: 500px;
 	border-radius: 10px;
 	display: inline-block;
@@ -134,16 +138,28 @@ input {
 	#inlineimg {
 		background-image: url("https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png");
 	}
+	@media screen and (max-width: 1000px) {
+		.livesearch {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+		body {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+
 </style>
 </head>
 <body>
-<div style="width: 75%; margin: 0 auto;">
+<div style="width: 80%; margin: 0 auto;">
 <div class="title"><img width="5%" src="img/logo.png" style="margin: 0 auto; vertical-align: middle"> Search &amp; Information Hub</div>
 <div class="livesearch products">
 <div class="center">
 <p>PRODUCT IMAGE</p>
 <form onSubmit="return imglive();">
-Item <input type="text" name="urlimg" id="urlimg" style="width: 105px;" autofocus>
+Item <input type="text" name="urlimg" id="urlimg" style="width: 30%;" autofocus>
 <select id="viewid">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -153,7 +169,7 @@ Item <input type="text" name="urlimg" id="urlimg" style="width: 105px;" autofocu
 </select>
 <input type="submit" value="search" class="material-icons button"> 
 </form>
-<img src="https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png" width="350px" id="inlineimg">
+<img src="https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png" style="width: 70%; max-width: 350px;" id="inlineimg">
 </div>
 </div>
 <div class="livesearch">
@@ -179,7 +195,7 @@ Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"
 <a href="https://github.com/Business-Delivery/thin-mints"><div class="button" style="padding-bottom: 6px;"> Information & Download</div></a>
 </div>
 </div>
-<div class="livesearch">
+<!--<div class="livesearch">
 <div class="center">
 <p>SMALL FENCE SPACING</p>
 <form onSubmit="return smallfence();">
@@ -191,12 +207,12 @@ Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"
 
 
 
-<div style="font-family: Helvetica, Trebuchet MS, Ubuntu, Verdana, sans-serif; margin: 0 0 0 140px">
-  <div class="smallfc" style="width:212px; height: 212px;"> <!-- Height = 212 for 1 line of text; Height = 231 for 2 lines of text -->
+<div style="font-family: Roboto, Helvetica, Trebuchet MS, Ubuntu, Verdana, sans-serif; margin: 0 0 0 140px">
+  <div class="smallfc" style="width:212px; height: 212px;">  Height = 212 for 1 line of text; Height = 231 for 2 lines of text 
       <img src="img/sf.png" width="212px" alt="Bake with Chocolate">
       <div style="height: 50px; width: 195px; margin-left: 8px">
-        <span style="font-size:16px;">
-			<strong><span id="bold">Bold</span></strong> <span style="display: linline" id="normal">Normal</span>
+        <span style="font-size:20px; color:#0060a9">
+			<span id="bold">Title</span><br><span style="display: linline; color: #000; font-size: 1rem;" id="normal">Subtitle</span>
         </span>
         <br>
         <div style="background: #007fb4; width:100px; height: 25px; font-size:13px; font-weight:bold; color:#fff; text-align: center; float: right; margin-top: 2px;" class="buttonstyle" lang="x-buttonstyle">
@@ -206,7 +222,7 @@ Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"
         </div>
       </div>
   </div>
-</div></div>
+</div></div>-->
 
 	</div>
 </body>
