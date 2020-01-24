@@ -1,230 +1,176 @@
 <html>
+
 <head>
-<title>BD Search & Information Hub</title>
-<link href='https://fonts.googleapis.com/css?family=Comfortaa|Lato:400,900' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" 
-      type="image/png" 
-      href="img/logo.png">
-<meta content="True" name="HandheldFriendly">
-<meta content="320" name="MobileOptimized">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-function process()
-{
-var url="https://bd-stage.ecom.costco.com/.product." + document.getElementById("url").value + ".html";
-location.href=url;
-return false;
-}
-</script>
-<script>
-function main()
-{
-var urllive="https://www.costcobusinessdelivery.com/.product." + document.getElementById("urllive").value + ".html";
-location.href=urllive;
-return false;
-}
-</script>
-<script>
-function imglive()
-{
-var urlimg="https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeId=739&itemId=" + document.getElementById("urlimg").value + "&viewId=" + document.getElementById("viewid").value;
-$("#inlineimg").attr("src", urlimg);
-return false;
-}
-</script><script>
-function googsearch()
-{
-var urlgoogle="https://www.google.com/search?q=site%3Acostcobusinessdelivery.com%20" + document.getElementById("urlgoogle").value;
-location.href=urlgoogle;
-return false;
-}
-</script><script>
-function smallfence()
-{
-document.getElementById("bold").innerHTML = document.getElementById("sf2").value;
-document.getElementById("normal").innerHTML = document.getElementById("sf1").value;
-return false;
-}
-</script>
-<style>
-body {
-	font-family: 'Lato', sans-serif;
-	background: #efefef;
-	color: #3B3B3B;
-	min-width: 700px;
-	max-width: 2500px;
-	}
-	p {
-	font-family: 'Lato', sans-serif;
-	font-weight: 700;
-	font-size: 20px;
-}
-
-.button {
-	    background-color: #305c82;
-    border: none;
-    color: white;
-    padding: 2px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-	border-radius: 100px;
-	box-shadow: 0px 3px 3px rgba(0,0,0,0.20);
-}
-.button:hover {
-	box-shadow: 0px 3px 3px rgba(0,0,0,0);
-	transform: translateY(2px);
-}
-
-input {
-	border: none;
-	background-color: #E2E2E2;
-	height: 25px;
-	border-radius: 100px;
-	padding: 5px 10px;
-	
-}
-
-.center {
-
-	text-align: center;
-}
-.stagesearch {
-	padding-top: 1px;
-	background: #fff;
-	width: 500px;
-	height: 100px;
-	border-radius: 8px;
-	margin: 0 auto;
-	margin-top: 30px;
-}
-.livesearch {
-	margin: 0 auto;
-	margin-right: 20px;
-	margin-left: 5%;
-	margin-top: 20px;
-	padding-top: 2px;
-	background: #fff;
-	width: 40%;
-	min-height: 500px;
-	border-radius: 10px;
-	display: inline-block;
-	float: left;
-	/* box-shadow: 0px 3px 3px rgba(0,0,0,0.20); */
-}
-.logo {
-	width: 100%;
-}
-.head {
-	margin: 0 auto;
-	width: 25em;
-}
-.title {
-	font-size: 30px;
-	margin: 10px 0 0 0;
-}
-.subtitle {
-	display: block;
-	float:clear;
-}
-	.products {
-		height: 475px;
-	}
-	#inlineimg {
-		background-image: url("https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png");
-	}
-	@media screen and (max-width: 1000px) {
-		.livesearch {
-			display: block;
-			float: none;
-			width: 100%;
+	<title>BD Search & Information Hub</title>
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa|Lato:400,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="img/logo.png">
+	<meta content="True" name="HandheldFriendly">
+	<meta content="320" name="MobileOptimized">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script>
+		function process() {
+			var url = "https://bd-stage.ecom.costco.com/.product." + document.getElementById("url").value + ".html";
+			location.href = url;
+			return false;
 		}
+	</script>
+	<script>
+		function main() {
+			var urllive = "https://www.costcobusinessdelivery.com/.product." + document.getElementById("urllive").value + ".html";
+			location.href = urllive;
+			return false;
+		}
+	</script>
+	<script>
+		function imglive() {
+			var urlimg = "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeId=739&itemId=" + document.getElementById("urlimg").value + "&viewId=" + document.getElementById("viewid").value;
+			$("#inlineimg").attr("src", urlimg);
+			return false;
+		}
+	</script>
+	<script>
+		function googsearch() {
+			var urlgoogle = "https://www.google.com/search?q=site%3Acostcobusinessdelivery.com%20" + document.getElementById("urlgoogle").value;
+			location.href = urlgoogle;
+			return false;
+		}
+	</script>
+	<script>
+		function smallfence() {
+			document.getElementById("bold").innerHTML = document.getElementById("sf2").value;
+			document.getElementById("normal").innerHTML = document.getElementById("sf1").value;
+			return false;
+		}
+	</script>
+	<style>
+
 		body {
-			width: 100%;
-			min-width: 100%;
+			background: #eee;
 		}
-	}
+		.bg-purple {
+			background: #0073a6;
+			color: white;
+		}
 
-</style>
+		.navbar-brand {
+			color: white !important;
+		}
+
+		.button {
+			background-color: #305c82;
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+		}
+
+		.button:hover {
+			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
+			transform: translateY(2px);
+		}
+
+		input {
+			border: none;
+			background-color: #E2E2E2;
+			height: 25px;
+			border-radius: 5px;
+			padding: 5px 10px;
+
+		}
+	</style>
 </head>
+
 <body>
-<div style="width: 80%; margin: 0 auto;">
-<div class="title"><img width="5%" src="img/logo.png" style="margin: 0 auto; vertical-align: middle"> Search &amp; Information Hub</div>
-<div class="livesearch products">
-<div class="center">
-<p>PRODUCT IMAGE</p>
-<form onSubmit="return imglive();">
-Item <input type="text" name="urlimg" id="urlimg" style="width: 30%;" autofocus>
-<select id="viewid">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>	
-</select>
-<input type="submit" value="search" class="material-icons button"> 
-</form>
-<img src="https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png" style="width: 70%; max-width: 350px;" id="inlineimg">
-</div>
-</div>
-<div class="livesearch">
-	<div class="center">
-<p>STAGING SITE</p>
-<form onSubmit="return process();">
-Item <input type="text" name="url" id="url"> <input type="submit" value="search" class="material-icons button">
-</form>
-<p>LIVE SITE</p>
-<form onSubmit="return main();">
-Item <input type="text" name="urllive" id="urllive"> <input type="submit" value="search" class="material-icons button">
-</form>
-<p>SITE WIDE SEARCH</p>
-<p style="font-size: 10px; margin-top: -20px">Powered by Google</p>
-<form onSubmit="return googsearch();">
-Search <input type="text" name="urlgoogle" id="urlgoogle"  style="width: 130px;"> <input type="submit" value="search" class="material-icons button">
-</form>
-</div>
-</div>
-<div class="livesearch">
-<div class="center">
-<p>LOCATION BOOKMARKS</p>
-<a href="https://github.com/Business-Delivery/thin-mints"><div class="button" style="padding-bottom: 6px;"> Information & Download</div></a>
-</div>
-</div>
-<!--<div class="livesearch">
-<div class="center">
-<p>SMALL FENCE SPACING</p>
-<form onSubmit="return smallfence();">
-<input type="text" name="sf2" id="sf2" placeholder="Bold" style="width: 130px;">
-<br><br>
-<input type="text" name="sf1" id="sf1" placeholder="Normal" style="width: 130px;"><br><input type="submit" value="Test" class="button">
-</form>
-</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-purple color-white shadow">
+		<a class="navbar-brand ml-4" href="#"><img src="img/logo-white.png" alt="Logo"
+				style="width: 40px;">&nbsp;&nbsp;Search &amp; Information Hub</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto d-md-none">
+				<li class="nav-item">
+					<a class="nav-link" href="#images">Product Images</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#sitesearch">Site Search</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#bookmarks">Location Bookmarks</a>
+				</li>
+			</ul>
+			<span class="navbar-text ml-auto">
+				Internal Use Only
+			</span>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="livesearch products col-lg-5 col-10 mx-auto bg-white text-center rounded shadow py-4 mt-5" id="images">
+				<h3>Product Images</h3>
+				<form onSubmit="return imglive();">
+					Item <input type="text" name="urlimg" id="urlimg" style="width: 30%;" autofocus>
+					<select id="viewid">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<input type="submit" value="search" class="material-icons button">
+				</form>
+				<img src="https://www.costcobusinessdelivery.com//wcsstore/CostcoGLOBALSAS/images/unavailable_350.png"
+					style="width: 70%; max-width: 350px;" id="inlineimg">
+			</div>
 
-
-
-<div style="font-family: Roboto, Helvetica, Trebuchet MS, Ubuntu, Verdana, sans-serif; margin: 0 0 0 140px">
-  <div class="smallfc" style="width:212px; height: 212px;">  Height = 212 for 1 line of text; Height = 231 for 2 lines of text 
-      <img src="img/sf.png" width="212px" alt="Bake with Chocolate">
-      <div style="height: 50px; width: 195px; margin-left: 8px">
-        <span style="font-size:20px; color:#0060a9">
-			<span id="bold">Title</span><br><span style="display: linline; color: #000; font-size: 1rem;" id="normal">Subtitle</span>
-        </span>
-        <br>
-        <div style="background: #007fb4; width:100px; height: 25px; font-size:13px; font-weight:bold; color:#fff; text-align: center; float: right; margin-top: 2px;" class="buttonstyle" lang="x-buttonstyle">
-          <div style="padding-top: 5.25px;">
-            Shop Now &#10095;
-          </div>
-        </div>
-      </div>
-  </div>
-</div></div>-->
-
+			<div class="livesearch col-lg-5 col-10 mx-auto bg-white text-center rounded shadow py-4 mt-5" id="sitesearch">
+				<h3>Site Search</h3>
+				
+				<form onSubmit="return process();">
+					Stage <input type="text" name="url" id="url" placeholder="item number"> <input type="submit" value="search"
+						class="material-icons button">
+				</form>
+				
+				<form onSubmit="return main();">
+					Live&nbsp;&nbsp;<input type="text" name="urllive" id="urllive" placeholder="item number"> <input type="submit" value="search"
+						class="material-icons button">
+				</form>
+				<span>Keyword Search</span>
+				<span class="d-block" style="margin-top: -5px;font-size: 10px;">Powered by Google</span>
+				<form onSubmit="return googsearch();">
+					Search <input type="text" name="urlgoogle" id="urlgoogle" style="width: 130px;"> <input
+						type="submit" value="search" class="material-icons button">
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-10 mx-auto bg-white text-center rounded shadow py-4 mt-5" id="bookmarks">
+				<h3>Location Bookmarks</h3>
+				<p class="w-75 mx-auto">Looking for the latest version of the Location Bookmarks? Click the button below
+					to download.</p>
+				<a href="https://github.com/Business-Delivery/thin-mints">
+					<div class="button" style="padding-bottom: 6px;"> Information & Download</div>
+				</a>
+			</div>
+		</div>
 	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>
