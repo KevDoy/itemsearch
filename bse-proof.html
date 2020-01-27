@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>BSE Digital Proofing</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- Bootstrap & Font Awesome  -->
+	<!--
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+-->
+	<!--    <link href="https://www.costcobusinessdelivery.com/wcsstore/RWDStaticAssets/css/rwd.app.min.css?v=30392370" rel="stylesheet">-->
+
+	<link href="https://www.costcobusinessdelivery.com/wcsstore/RWDStaticAssets/css/rwd.app.min.css?v=30392370"
+		rel="stylesheet">
+
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<!-- Json2html -->
+
+</head>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.3.0/json2html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+
+<!-- Simple Styling -->
+<style>
+	body {
+		background: #fff;
+		/* #dcdddf, #eee */
+	}
+
+	.savingseventcontainer {
+		background: #dcdddf !important;
+		border-radius: 5px;
+		padding: 10px 20px;
+	}
+
+	.couponcontainer {
+		max-width: 1400px;
+	}
+
+	.coupontile {
+		height: 435px;
+		border: #dcdddf 4px solid;
+		background: #fff;
+		border-radius: 20px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	#coupons a {
+		text-decoration: none;
+		color: #000 !important;
+	}
+
+	.pricing {
+		float: left;
+		margin-right: 0;
+		white-space: nowrap;
+		color: #d7232a;
+		font-size: 35px;
+		font-weight: 800
+	}
+
+	.price-dollarSign,
+	.price-cents,
+	.price-limit {
+		font-size: 15px;
+		vertical-align: super !important;
+		margin: 0;
+		padding: 0;
+	}
+
+	.price-cents {
+		margin-left: -5px;
+		font-size: 20px;
+		vertical-align: top;
+	}
+
+	.price-limit {
+		margin-top: -10px !important;
+		margin-bottom: 15px;
+		padding-left: 8px;
+		display: block;
+		font-size: 10px !important;
+		text-transform: uppercase;
+		word-break: break-all;
+	}
+
+	.pricing-item {
+		margin-top: 20px;
+		float: left;
+		display: inline;
+		vertical-align: top;
+	}
+
+	.price-off {
+		font-size: 25px;
+		font-weight: 200;
+		padding-left: 5px;
+		padding-top: 3px;
+		display: block;
+		letter-spacing: -2px;
+	}
+
+	.key {
+		display: none;
+		visibility: hidden;
+	}
+
+	.brand {
+		font-weight: bold;
+	}
+
+	.item-red-text {
+		color: #d7232a;
+		font-style: italic;
+	}
+
+	.item-red-text,
+	.item-numbers {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.productimg {
+		width: 75%;
+		margin: 0 auto;
+		margin-bottom: 5px !important;
+	}
+
+	@media (max-width: 991px) {
+		.coupontile {
+			height: 525px;
+		}
+	}
+
+	@media (min-width: 1030px) {
+		.productimg {
+			width: 90%;
+		}
+
+		.coupontile {
+			height: 450px;
+		}
+	}
+
+	.item-relative {
+		position: relative;
+	}
+
+	.item-absolute {
+		position: absolute;
+	}
+</style>
+<style>
+	.bse-hero {
+		background: url(https://www.costcobusinessdelivery.com/wcsstore/USBD/bse-page/bse-background-aqua.jpg);
+		/* CHANGE COLOR BASED ON EVENT
+			/*
+			/*	lime
+			/*	purple
+			/*	goldenrod
+			/*	vermilion
+			/*	cyan
+			/*	aqua
+			*/
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		border-radius: 5px;
+	}
+
+	.bse-hero-description {
+		color: #fff !important;
+		font-size: 1.3em;
+	}
+
+	.bse-valid-dates {
+		text-align: left;
+		margin-top: 15px;
+		color: white;
+		font-size: 20px;
+
+	}
+
+	.bse-hero-save {
+		width: 100%;
+	}
+
+	.bse-hero-items {
+		padding-top: 20px;
+	}
+
+	.bse-hero-items-mobile {
+		visibility: hidden;
+		display: none;
+	}
+
+	.margintop-1 {
+		margin-top: 10px
+	}
+
+	.margintop-2 {
+		margin-top: 20px
+	}
+
+	.margintop-3 {
+		margin-top: 30px
+	}
+
+	@media (max-width: 1275px) {
+		.bse-hero-description {
+			font-size: 15px;
+			line-height: 15px;
+		}
+
+		.bse-hero-save {
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		.bse-valid-dates {
+			font-size: 17px;
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		.bse-hero-description,
+		.bse-hero-items {
+			visibility: hidden;
+			display: none;
+		}
+
+		.bse-hero-items-mobile {
+			visibility: visible;
+			display: block;
+		}
+
+		.bse-valid-dates {
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.bse-valid-dates {
+			font-size: 15px;
+			text-align: center;
+		}
+	}
+
+	.bse-sidekick {
+		width: 100%;
+		background: #eff7fb;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		border: solid 1px #e2eef6;
+	}
+
+	.bse-sidekick .locationpin {
+		font-size: 45px;
+		color: #e51937;
+	}
+
+	.bse-sidekick-text {
+		padding-top: 10px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.bse-sidekick-link {
+		padding-top: 20px;
+	}
+
+	.align-link-right {
+		text-align: right;
+	}
+
+	.align-link-center {
+		text-align: center;
+	}
+
+	.visible-sm-custom {
+		display: none;
+		visibility: hidden;
+	}
+
+	.visible-sm-custom hr {
+		padding: 0;
+		margin: 0;
+	}
+
+	@media (max-width: 1025px) {
+		.hidden-sm-custom {
+			visibility: hidden;
+			display: none;
+		}
+
+		.visible-sm-custom {
+			visibility: visible;
+			display: block;
+		}
+
+		.bse-sidekick-text {
+			padding-top: 0;
+		}
+
+		.bse-sidekick-link {
+			padding-top: 0;
+			padding: 20px 0;
+			text-align: center !important;
+		}
+	}
+
+	.bse-hero,
+	.bse-sidekick {
+		max-width: 1370px;
+		margin-bottom: 20px;
+	}
+</style>
+
+
+<div data-bi-placement="digitalcoupons_content" class="container bse-hero">
+	<div class="row">
+		<div class="col-lg-5 col-xl-4 col-xl-offset-1 col-lg-offset-0 hidden-xs hidden-sm">
+
+
+			<!-- BSE FEATURED ITEM LINK DESKTOP -->
+			<a href="/CatalogSearch?storeId=11301&amp;catalogId=11701&amp;langId=-1&amp;keyword=FIJICoverItems010620">
+
+				<!-- BSE FEATURED ITEM IMAGE DESKTOP -->
+				<img src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/herodd.jpg"
+					class="img-responsive bse-hero-items" alt="Featured Offer">
+
+
+			</a>
+		</div>
+		<div class="col-lg-6 col-lg-offset-1 col-xs-offset-0">
+			<div class="row">
+				<div class="col-lg-10">
+					<h1 style="color: white; padding-top: 30px; font-size: 50px;">BSE PROOFING SCREEN</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<h2 class="bse-valid-dates">
+
+						<!-- BSE VALID DATES -->
+						<strong>DATE RANGE</strong>
+
+
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="bse-hero-description">THIS IS A PROOFING SCREEN.</p>
+					<p class="bse-hero-description">FOR INTERNAL USE ONLY.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-8 col-xs-offset-2">
+
+
+			<!-- BSE FEATURED ITEM LINK MOBILE-->
+			<a href="/CatalogSearch?storeId=11301&amp;catalogId=11701&amp;langId=-1&amp;keyword=FIJICoverItems010620">
+
+				<!-- BSE FEATURED ITEM IMAGE MOBILE-->
+				<img src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/herodd.jpg"
+					class="img-responsive bse-hero-items-mobile" alt="Featured Offer">
+
+
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- BSE HEADER END -->
+
+
+
+<div class="container-fluid couponcontainer">
+	<div class="savingseventcontainer">
+		<div class="row" style="margin-bottom: 5px;">
+			<div class="col-md-1 hidden-sm-custom text-right">
+				<img src="https://www.costcobusinessdelivery.com/wcsstore/USBD/bse-page/left-icon-dark.png"
+					alt="Walk-In" style="height: 60px; margin-top: 5px">
+			</div>
+			<div class="col-md-5 hidden-sm-custom">
+				<div class="bse-sidekick-text">Shop your local Costco Business Center</div>
+				<p>All members welcome</p>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-xl-3 bse-sidekick-link align-link-right">
+				<a href="/savingsbook.html"><span>Browse Savings Book &#10095;</span></a>
+			</div>
+			<div class="col-xs-12 visible-sm-custom">
+				<hr>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-xl-3 bse-sidekick-link align-link-center">
+				<a
+					href="/warehouse-locations?location=&tiresCheckout=&orderitemId=&storeId=11301&catalogId=11701&fromPage=&hasBusiness=true&fromWLocSubmit=true&numOfWarehouses=10"><span>Find
+						a Warehouse &#10095;</span></a>
+			</div>
+		</div>
+		<div class="row" id="coupons">
+
+		</div>
+
+
+
+		<script type="text/javascript">
+			 //List items
+    var data = prompt("Please paste JSON Data");
+
+				var transform = {
+					"<>": "a", "href": "https://www.costcobusinessdelivery.com/CatalogSearch?keyword=${search}", "class": "key${key}", "html": [
+						{
+							"<>": "div", "class": "col-xs-6 col-lg-3 col-xl-2 coupontile margin-right", "html": [
+								{
+									'<>': 'div', "class": "row pricing", 'html': [
+										{
+											'<>': 'div', "class": "col-xs-12 item-relative", 'html': [
+												{
+													'<>': 'div', "class": "pricing-item", 'html': [
+														{ "<>": "span", "class": "price-dollarSign", "text": "${itemPrefix}" },
+														{ "<>": "span", "class": "price-dollar", "text": "${dollar}" },
+														{ "<>": "span", "class": "price-cents", "text": " ${cents}" }
+													]
+												},
+												{
+													'<>': 'div', "class": "pricing-item offandlimit item-absolute", 'html': [
+														{ "<>": "span", "class": "price-off", "text": "OFF" },
+														{ "<>": "span", "class": "price-limit", "text": " ${limit}" }
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									'<>': 'div', "class": "col-xs-12", 'html': [
+										{ "<>": "img", "class": "img-responsive productimg", "src": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeName=680&itemId=${imageFilePath}" }
+									]
+								},
+								{
+									'<>': 'div', "class": "row", 'html': [
+										{
+											'<>': 'div', "class": "col-xs-12 iteminfo", 'html': [
+												{ "<>": "span", "class": "brand", "text": "${product}" },
+												{ "<>": "br" },
+												{ "<>": "span", "class": "brand-details", "text": " ${description}" },
+												{ "<>": "br" },
+												{ "<>": "p", "class": "item-numbers", "text": "${item}" },
+												{ "<>": "br" },
+												{ "<>": "p", "class": "item-red-text", "text": "${redText}" }
+											]
+										}
+									]
+								}
+							]
+						}
+					]};
+$(function(){
+        
+        //Create the list
+        $('#coupons').json2html(data,transform);
+    });
+
+		</script>
+		<div style="clear:both"></div>
+		<div style="clear:both"></div>
+
+
+		<div class="container-fluid couponcontainer">
+
+			<div style="margin: 30px 0;">
+				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
+						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREBinders"><img
+							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_green.jpg"
+							class="img-responsive" style="border-radius: 10px" alt="Online-Only Binder & Supplies"></a>
+				</div>
+				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;="><a
+						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREShelving"><img
+							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_purple.jpg"
+							class="img-responsive" style="border-radius: 10px" alt="Online-Only Shelving"></a></div>
+				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
+						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREBoards"><img
+							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_red.jpg"
+							class="img-responsive" style="border-radius: 10px"
+							alt="Online-Only Bulletin & Dry Erase Boards"></a></div>
+				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
+						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREStorage"><img
+							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_yellow.jpg"
+							class="img-responsive" style="border-radius: 10px"
+							alt="Online-Only Storage & organization"></a></div>
+			</div>
+
+			<div style="clear:both"></div>
+			<div style="clear:both"></div>
+
+
+			<!--start rfp Items section-->
+
+			<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-12" style="margin-top:10px;">
+				<a href="/wcsstore/CostcoUSBDCatalogAssetStore/pdf/TruckloadBrochure_BD.pdf" style="margin: 0 auto;">
+					<img class="img-responsive"
+						src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/banner-truckload.jpg"
+						alt="Save by the truckload" style="border: 1px solid #e6dbeb; border-radius: 10px"><br>
+					<div style="clear:both"></div>
+					<p style="text-align: center; text-decoration: none">
+						*For details and pricing contact a marketing representative at your local Costco Business Center
+						or
+						email BDtruckloads@costco.com
+					</p>
+				</a>
+			</div>
+			<div style="clear:both;border-top: 1px solid #e6dbeb;"></div>
+		</div>
+	</div>
+
+	<!--start terms-->
+	<div style="padding: 12px; color: #222222;font-size: 12px; line-height: 16px;text-align: left;">
+
+		<a name="show-proof-mvm"></a><a name="terms-mvm"></a>
+		<!--proof required legal-->
+
+
+		<p><span class="productName">Terms and Conditions</span><br><span class="productText">Products and Instant
+				Savings – Instant Savings are valid only during Janurary 6 - February 1, 2020, at Costco Business
+				Center. Selection may vary by location. A valid Costco membership is required. State law may require
+				sales tax to be charged on the pre-discounted price if the product is subject to sales tax. These taxes,
+				if any, are in addition to the amount that you are paying for the product. Quantities are limited. Item
+				limits apply, per member. Instant Savings limited to inventory available from manufacturer. A rain check
+				may be issued if the item is out of stock during the dates listed. All Instant Savings are off the
+				regular walk-in or delivered price. All Instant Savings are available for delivery unless indicated.
+				Delivery orders must be placed online at CostcoBusinessDelivery.com to receive Instant Savings. Instant
+				Savings are not available on Costco.com and may not be combined with any other promotion. Cigarette
+				items are for resale only. No cash redemption value.
+				<br><br>
+				Pricing – Items purchased at our Costco Business Centers have our lowest possible price. All prices
+				listed on CostcoBusinessDelivery.com are delivered prices.
+				<br><br>
+				Corrections of Errors and Omissions – We have made every effort to ensure the accuracy of the
+				information provided in these Instant Savings; however, there may be instances when information is
+				inaccurate, including information about a product’s Instant Savings or availability. We reserve the
+				right to correct any errors and/or omissions found in these Instant Savings.</span></p>
+
+		<a name="show-proof-mvm"></a><a name="terms-mvm"></a>
+		<!--proof required legal-->
+
+	</div>
+
+</div>
+<hr>
