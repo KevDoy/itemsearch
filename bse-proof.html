@@ -420,10 +420,10 @@
 
 
 
-<script type="text/javascript">
-			var data;
-			$.getJSON("https://mobilecontent.costco.com/live/resource/img/bd-test-011720/data33.js", function (json) {
-				data = json;
+		<script type="text/javascript">
+			 //List items
+    var data = prompt("Please paste JSON Data");
+
 				var transform = {
 					"<>": "a", "href":function(){if(this.delivery !== "N") return("https://www.costcobusinessdelivery.com/CatalogSearch?keyword=" + this.search);}, "class": "key${key}", "html": [
 						{
@@ -471,14 +471,12 @@
 								}
 							]
 						}
-					]
-				};
-				$(function () {
+					]};
+$(function(){
 
-					//Create the list
-					$('#coupons').json2html(data, transform);
-				});
-			});
+        //Create the list
+        $('#coupons').json2html(data,transform);
+    });
 
 		</script>
 		<div style="clear:both"></div>
@@ -565,4 +563,4 @@
 	</div>
 
 </div>
-<hr>
+<hr> 
