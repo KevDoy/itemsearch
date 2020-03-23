@@ -326,63 +326,12 @@
 		max-width: 1370px;
 		margin-bottom: 20px;
 	}
+		.nw-N {
+		visibility: hidden;
+		display: none;
+	}
 </style>
 
-
-<div data-bi-placement="digitalcoupons_content" class="container bse-hero">
-	<div class="row">
-		<div class="col-lg-5 col-xl-4 col-xl-offset-1 col-lg-offset-0 hidden-xs hidden-sm">
-
-
-			<!-- BSE FEATURED ITEM LINK DESKTOP -->
-			<a href="/CatalogSearch?storeId=11301&amp;catalogId=11701&amp;langId=-1&amp;keyword=FIJICoverItems010620">
-
-				<!-- BSE FEATURED ITEM IMAGE DESKTOP -->
-				<img src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/herodd.jpg"
-					class="img-responsive bse-hero-items" alt="Featured Offer">
-
-
-			</a>
-		</div>
-		<div class="col-lg-6 col-lg-offset-1 col-xs-offset-0">
-			<div class="row">
-				<div class="col-lg-10">
-					<h1 style="color: white; padding-top: 30px; font-size: 50px;">BSE PROOFING SCREEN</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-8">
-					<h2 class="bse-valid-dates">
-
-						<!-- BSE VALID DATES -->
-						<strong>DATE RANGE</strong>
-
-
-					</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<p class="bse-hero-description">THIS IS A PROOFING SCREEN.</p>
-					<p class="bse-hero-description">FOR INTERNAL USE ONLY.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-8 col-xs-offset-2">
-
-
-			<!-- BSE FEATURED ITEM LINK MOBILE-->
-			<a href="/CatalogSearch?storeId=11301&amp;catalogId=11701&amp;langId=-1&amp;keyword=FIJICoverItems010620">
-
-				<!-- BSE FEATURED ITEM IMAGE MOBILE-->
-				<img src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/herodd.jpg"
-					class="img-responsive bse-hero-items-mobile" alt="Featured Offer">
-
-
-			</a>
-		</div>
-	</div>
-</div>
 
 
 
@@ -398,21 +347,19 @@
 					alt="Walk-In" style="height: 60px; margin-top: 5px">
 			</div>
 			<div class="col-md-5 hidden-sm-custom">
-				<div class="bse-sidekick-text">Shop your local Costco Business Center</div>
-				<p>All members welcome</p>
+				<div class="bse-sidekick-text">Internal Digital Coupons Test Tool</div>
+				<p>DO NOT SHARE</p>
 			</div>
 
 			<div class="col-xs-12 col-sm-12 col-lg-12 col-xl-3 bse-sidekick-link align-link-right">
-				<a href="/savingsbook.html"><span>Browse Savings Book &#10095;</span></a>
+				<a href="#" id="nationwide"><span>Nationwide Only</span></a>
 			</div>
 			<div class="col-xs-12 visible-sm-custom">
 				<hr>
 			</div>
 
 			<div class="col-xs-12 col-sm-12 col-lg-12 col-xl-3 bse-sidekick-link align-link-center">
-				<a
-					href="/warehouse-locations?location=&tiresCheckout=&orderitemId=&storeId=11301&catalogId=11701&fromPage=&hasBusiness=true&fromWLocSubmit=true&numOfWarehouses=10"><span>Find
-						a Warehouse &#10095;</span></a>
+				<a href="#" id="local"><span>Include Local</span></a>
 			</div>
 		</div>
 		<div class="row" id="coupons">
@@ -426,7 +373,7 @@
     var data = prompt("Please paste JSON Data");
 
 				var transform = {
-					"<>": "a", "href":function(){if(this.delivery !== "N") return("https://www.costcobusinessdelivery.com/CatalogSearch?keyword=" + this.search);}, "class": "key${key}", "html": [
+					"<>": "a", "href":function(){if(this.delivery !== "N") return("https://www.costcobusinessdelivery.com/CatalogSearch?keyword=" + this.search);}, "class": "key${key} nw-${nationwide}", "html": [
 						{
 							"<>": "div", "class": "col-xs-6 col-lg-3 col-xl-2 coupontile margin-right", "html": [
 								{
@@ -484,51 +431,7 @@ $(function(){
 		<div style="clear:both"></div>
 
 
-		<div class="container-fluid couponcontainer">
 
-			<div style="margin: 30px 0;">
-				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
-						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREBinders"><img
-							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_green.jpg"
-							class="img-responsive" style="border-radius: 10px" alt="Online-Only Binder & Supplies"></a>
-				</div>
-				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;="><a
-						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREShelving"><img
-							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_purple.jpg"
-							class="img-responsive" style="border-radius: 10px" alt="Online-Only Shelving"></a></div>
-				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
-						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREBoards"><img
-							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_red.jpg"
-							class="img-responsive" style="border-radius: 10px"
-							alt="Online-Only Bulletin & Dry Erase Boards"></a></div>
-				<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-6" style="margin-top:10px;"><a
-						href="https://www.costcobusinessdelivery.com/CatalogSearch?keyword=MOREStorage"><img
-							src="https://mobilecontent.costco.com/live/resource/img/bd-bse-010620/online_yellow.jpg"
-							class="img-responsive" style="border-radius: 10px"
-							alt="Online-Only Storage & organization"></a></div>
-			</div>
-
-			<div style="clear:both"></div>
-			<div style="clear:both"></div>
-
-
-			<!--start rfp Items section-->
-
-			<div class="col-xs-12 col-offset-xs-1 col-offset-md-0 col-md-12" style="margin-top:10px;">
-				<a href="/wcsstore/CostcoUSBDCatalogAssetStore/pdf/TruckloadBrochure_BD.pdf" style="margin: 0 auto;">
-					<img class="img-responsive"
-						src="https://mobilecontent.costco.com/live/resource/img/bd-bse-121619/banner-truckload.jpg"
-						alt="Save by the truckload" style="border: 1px solid #e6dbeb; border-radius: 10px"><br>
-					<div style="clear:both"></div>
-					<p style="text-align: center; text-decoration: none">
-						*For details and pricing contact a marketing representative at your local Costco Business Center
-						or
-						email BDtruckloads@costco.com
-					</p>
-				</a>
-			</div>
-			<div style="clear:both;border-top: 1px solid #e6dbeb;"></div>
-		</div>
 	</div>
 
 	<!--start terms-->
@@ -538,25 +441,6 @@ $(function(){
 		<!--proof required legal-->
 
 
-		<p><span class="productName">Terms and Conditions</span><br><span class="productText">Products and Instant
-				Savings – Instant Savings are valid only during Janurary 6 - February 1, 2020, at Costco Business
-				Center. Selection may vary by location. A valid Costco membership is required. State law may require
-				sales tax to be charged on the pre-discounted price if the product is subject to sales tax. These taxes,
-				if any, are in addition to the amount that you are paying for the product. Quantities are limited. Item
-				limits apply, per member. Instant Savings limited to inventory available from manufacturer. A rain check
-				may be issued if the item is out of stock during the dates listed. All Instant Savings are off the
-				regular walk-in or delivered price. All Instant Savings are available for delivery unless indicated.
-				Delivery orders must be placed online at CostcoBusinessDelivery.com to receive Instant Savings. Instant
-				Savings are not available on Costco.com and may not be combined with any other promotion. Cigarette
-				items are for resale only. No cash redemption value.
-				<br><br>
-				Pricing – Items purchased at our Costco Business Centers have our lowest possible price. All prices
-				listed on CostcoBusinessDelivery.com are delivered prices.
-				<br><br>
-				Corrections of Errors and Omissions – We have made every effort to ensure the accuracy of the
-				information provided in these Instant Savings; however, there may be instances when information is
-				inaccurate, including information about a product’s Instant Savings or availability. We reserve the
-				right to correct any errors and/or omissions found in these Instant Savings.</span></p>
 
 		<a name="show-proof-mvm"></a><a name="terms-mvm"></a>
 		<!--proof required legal-->
@@ -565,3 +449,13 @@ $(function(){
 
 </div>
 <hr> 
+	
+	<script>
+		$("#local").click(function(){
+    $(".nw-N").css( {"visibility": "visible", "display": "block"} );
+});
+		$("#nationwide").click(function(){
+    $(".nw-N").css( {"visibility": "hidden", "display": "none"} );
+});
+	
+	</script>
