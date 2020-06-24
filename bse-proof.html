@@ -32,6 +32,7 @@
 <style>
 	body {
 		background: #fff;
+		 -webkit-text-size-adjust: 100%;
 		/* #dcdddf, #eee */
 	}
 
@@ -46,11 +47,12 @@
 	}
 
 	.coupontile {
-		height: 435px;
+		height: 410px;
 		border: #dcdddf 4px solid;
 		background: #fff;
 		border-radius: 20px;
 		font-family: 'Roboto', sans-serif;
+		position: relative;
 	}
 
 	#coupons a {
@@ -58,22 +60,31 @@
 		color: #000 !important;
 	}
 
+ .bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 	.pricing {
 		float: left;
 		margin-right: 0;
 		white-space: nowrap;
 		color: #d7232a;
-		font-size: 35px;
-		font-weight: 800
+		font-size: 45px;
+		font-weight: 800;
+		line-height: 40px;
 	}
 
 	.price-dollarSign,
 	.price-cents,
 	.price-limit {
 		font-size: 15px;
-		vertical-align: super !important;
+		vertical-align: super;
 		margin: 0;
 		padding: 0;
+	}
+	.price-dollarSign {
+		font-size: 20px;
 	}
 
 	.price-cents {
@@ -83,18 +94,18 @@
 	}
 
 	.price-limit {
-		margin-top: -10px !important;
-		margin-bottom: 15px;
-		padding-left: 8px;
 		display: block;
-		font-size: 10px !important;
+		font-size: 12px !important;
 		text-transform: uppercase;
-		word-break: break-all;
-		line-height: 11px;
+		line-height: 5px;
+		vertical-align: top;
+		margin-top: 4px;
+		margin-bottom: 15px;
+		font-weight: 400
 	}
 
 	.pricing-item {
-		margin-top: 20px;
+		margin-top: 10px;
 		float: left;
 		display: inline;
 		vertical-align: top;
@@ -102,11 +113,11 @@
 
 	.price-off {
 		font-size: 25px;
-		font-weight: 200;
+		line-height: 40px;
+
 		padding-left: 5px;
-		padding-top: 3px;
-		display: block;
-		letter-spacing: -2px;
+		letter-spacing: 0px;
+		vertical-align: top;
 	}
 
 	.key {
@@ -132,12 +143,13 @@
 	.productimg {
 		width: 75%;
 		margin: 0 auto;
-		margin-bottom: 5px !important;
+		padding-bottom: 10px !important; 
+      
 	}
 
 	@media (max-width: 991px) {
 		.coupontile {
-			height: 525px;
+			height: 425px;
 		}
 	}
 
@@ -147,7 +159,7 @@
 		}
 
 		.coupontile {
-			height: 450px;
+			height: 410px;
 		}
 	}
 
@@ -161,7 +173,7 @@
 </style>
 <style>
 	.bse-hero {
-		background: url(https://www.costcobusinessdelivery.com/wcsstore/USBD/bse-page/bse-background-aqua.jpg);
+		background: url(https://www.costcobusinessdelivery.com/wcsstore/USBD/bse-page/bse-background-cyan.jpg);
 		/* CHANGE COLOR BASED ON EVENT
 			/*
 			/*	lime
@@ -175,6 +187,7 @@
 		background-repeat: no-repeat;
 		width: 100%;
 		border-radius: 5px;
+
 	}
 
 	.bse-hero-description {
@@ -325,9 +338,16 @@
 	.bse-sidekick {
 		max-width: 1370px;
 		margin-bottom: 20px;
+		
 	}
-	
+	.nw-N {
+		visibility: hidden;
+		display: none;
+	}
+
 </style>
+
+
 
 
 
