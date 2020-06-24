@@ -381,22 +381,13 @@
 													'<>': 'div', "class": "pricing-item", 'html': [
 														{ "<>": "span", "class": "price-dollarSign", "text": "${itemPrefix}" },
 														{ "<>": "span", "class": "price-dollar", "text": "${dollar}" },
-														{ "<>": "span", "class": "price-cents", "text": " ${cents}" }
-													]
-												},
-												{
-													'<>': 'div', "class": "pricing-item offandlimit item-absolute", 'html': [
+														{ "<>": "span", "class": "price-cents", "text": " ${cents}" },
 														{ "<>": "span", "class": "price-off", "text": "OFF" },
-														{ "<>": "span", "class": "price-limit", "html": " ${limit}" }
+														{ "<>": "span", "class": "price-limit", "html": "${limit}" }
 													]
 												}
 											]
 										}
-									]
-								},
-								{
-									'<>': 'div', "class": "col-xs-12", 'html': [
-										{ "<>": "img", "class": "img-responsive productimg", "src": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeName=680&itemId=${imageFilePath}" }
 									]
 								},
 								{
@@ -408,16 +399,21 @@
 												{ "<>": "span", "class": "brand-details", "text": " ${description}" },
 												{ "<>": "br" },
 												{ "<>": "p", "class": "item-numbers", "text": "${item}" },
-												{ "<>": "br" },
 												{ "<>": "p", "class": "item-red-text", "text": "${redText}" }
 											]
 										}
 									]
+								},
+								{
+									'<>': 'div', "class": "col-xs-12 bottom-align-text", 'html': [
+										{ "<>": "img", "class": "img-responsive productimg", "src": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeName=680&itemId=${imageFilePath}" }
+									]
 								}
 							]
 						}
-					]};
-$(function(){
+					]
+				};
+				$(function () {
 
         //Create the list
         $('#coupons').json2html(data,transform);
