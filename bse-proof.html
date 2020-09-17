@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!-- Updated 06/24/20 // -->
+<!-- Updated 09/17/20 - KD // -->
+
 <head>
 	<title>Digital Coupons Testing Tool</title>
 
@@ -32,25 +33,25 @@
 <style>
 	body {
 		background: #fff;
-		 -webkit-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
 		/* #dcdddf, #eee */
 	}
 
 	.savingseventcontainer {
 		background: #dcdddf !important;
-		border-radius: 5px;
+		border-radius: 0px;
 		padding: 10px 20px;
 	}
 
-	.couponcontainer {
+	p .couponcontainer {
 		max-width: 1400px;
 	}
 
 	.coupontile {
-		height: 410px;
-		border: #dcdddf 4px solid;
+		height: 430px;
+		border: #dcdddf 2px solid;
 		background: #fff;
-		border-radius: 20px;
+		border-radius: 0;
 		font-family: 'Roboto', sans-serif;
 		position: relative;
 	}
@@ -60,11 +61,12 @@
 		color: #000 !important;
 	}
 
- .bottom-align-text {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+	.bottom-align-text {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
 	.pricing {
 		float: left;
 		margin-right: 0;
@@ -83,6 +85,7 @@
 		margin: 0;
 		padding: 0;
 	}
+
 	.price-dollarSign {
 		font-size: 20px;
 	}
@@ -100,7 +103,7 @@
 		line-height: 12px;
 		vertical-align: top;
 		margin-top: 4px;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		font-weight: 400
 	}
 
@@ -113,11 +116,11 @@
 
 	.price-off {
 		font-size: 25px;
-		line-height: 40px;
+		line-height: 25px;
 
-		padding-left: 5px;
+		padding-right: 5px;
 		letter-spacing: 0px;
-		vertical-align: top;
+		vertical-align: bottom;
 	}
 
 	.key {
@@ -143,8 +146,8 @@
 	.productimg {
 		width: 75%;
 		margin: 0 auto;
-		padding-bottom: 10px !important; 
-      
+		padding-bottom: 10px !important;
+
 	}
 
 	@media (max-width: 991px) {
@@ -159,7 +162,7 @@
 		}
 
 		.coupontile {
-			height: 410px;
+			height: 430px;
 		}
 	}
 
@@ -173,7 +176,7 @@
 </style>
 <style>
 	.bse-hero {
-		background: url(https://www.costcobusinessdelivery.com/wcsstore/USBD/bse-page/bse-background-cyan.jpg);
+		background: #00b0bd;
 		/* CHANGE COLOR BASED ON EVENT
 			/*
 			/*	lime
@@ -186,7 +189,6 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100%;
-		border-radius: 5px;
 
 	}
 
@@ -198,13 +200,15 @@
 	.bse-valid-dates {
 		text-align: left;
 		margin-top: 15px;
-		color: white;
+		color: white !important;
 		font-size: 20px;
-
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	.bse-hero-save {
 		width: 100%;
+		margin-bottom: 10px;
 	}
 
 	.bse-hero-items {
@@ -338,17 +342,14 @@
 	.bse-sidekick {
 		max-width: 1370px;
 		margin-bottom: 20px;
-		
+
 	}
+
 	.nw-N {
 		visibility: hidden;
 		display: none;
 	}
-
 </style>
-
-
-
 
 
 
@@ -386,58 +387,58 @@
 
 
 		<script type="text/javascript">
-			 //List items
-    var data = prompt("Please paste JSON Data");
+			//List items
+			var data = prompt("Please paste JSON Data");
 
-				var transform = {
-					"<>": "a", "href":function(){if(this.delivery !== "N") return("https://www.costcobusinessdelivery.com/CatalogSearch?keyword=" + this.search);}, "class": "key${key} nw-${nationwide}", "html": [
-						{
-							"<>": "div", "class": "col-xs-6 col-lg-3 col-xl-2 coupontile margin-right", "html": [
-								{
-									'<>': 'div', "class": "row pricing", 'html': [
-										{
-											'<>': 'div', "class": "col-xs-12 item-relative", 'html': [
-												{
-													'<>': 'div', "class": "pricing-item", 'html': [
-														{ "<>": "span", "class": "price-dollarSign", "text": "${itemPrefix}" },
-														{ "<>": "span", "class": "price-dollar", "text": "${dollar}" },
-														{ "<>": "span", "class": "price-cents", "text": " ${cents}" },
-														{ "<>": "span", "class": "price-off", "text": "OFF" },
-														{ "<>": "span", "class": "price-limit", "html": "${limit}" }
-													]
-												}
-											]
-										}
-									]
-								},
-								{
-									'<>': 'div', "class": "row", 'html': [
-										{
-											'<>': 'div', "class": "col-xs-12 iteminfo", 'html': [
-												{ "<>": "span", "class": "brand", "text": "${product}" },
-												{ "<>": "br" },
-												{ "<>": "span", "class": "brand-details", "text": " ${description}" },
-												{ "<>": "br" },
-												{ "<>": "p", "class": "item-numbers", "text": "${item}" },
-												{ "<>": "p", "class": "item-red-text", "text": "${redText}" }
-											]
-										}
-									]
-								},
-								{
-									'<>': 'div', "class": "col-xs-12 bottom-align-text", 'html': [
-										{ "<>": "img", "class": "img-responsive productimg", "src": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeName=680&itemId=${imageFilePath}" }
-									]
-								}
-							]
-						}
-					]
-				};
-				$(function () {
+			var transform = {
+				"<>": "a", "href": function () { if (this.delivery !== "N") return ("https://www.costcobusinessdelivery.com/CatalogSearch?keyword=" + this.search); }, "class": "key${key} nw-${nationwide}", "html": [
+					{
+						"<>": "div", "class": "col-xs-6 col-lg-3 col-xl-2 coupontile margin-right", "html": [
+							{
+								'<>': 'div', "class": "row pricing", 'html': [
+									{
+										'<>': 'div', "class": "col-xs-12 item-relative", 'html': [
+											{
+												'<>': 'div', "class": "pricing-item", 'html': [
+													{ "<>": "span", "class": "price-off", "text": "SAVE" },
+													{ "<>": "span", "class": "price-dollarSign", "text": "${itemPrefix}" },
+													{ "<>": "span", "class": "price-dollar", "text": "${dollar}" },
+													{ "<>": "span", "class": "price-cents", "text": " ${cents}" },
+													{ "<>": "span", "class": "price-limit", "text": "${perUnit}" }
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								'<>': 'div', "class": "row", 'html': [
+									{
+										'<>': 'div', "class": "col-xs-12 iteminfo", 'html': [
+											{ "<>": "span", "class": "brand", "text": "${product}" },
+											{ "<>": "br" },
+											{ "<>": "span", "class": "brand-details", "text": " ${description}" },
+											{ "<>": "br" },
+											{ "<>": "p", "class": "item-numbers", "html": "${item}<br>${limit}" },
+											{ "<>": "p", "class": "item-red-text", "text": "${redText}" }
+										]
+									}
+								]
+							},
+							{
+								'<>': 'div', "class": "col-xs-12 bottom-align-text", 'html': [
+									{ "<>": "img", "class": "img-responsive productimg", "src": "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&recipeName=680&itemId=${imageFilePath}" }
+								]
+							}
+						]
+					}
+				]
+			};
+			$(function () {
 
-        //Create the list
-        $('#coupons').json2html(data,transform);
-    });
+				//Create the list
+				$('#coupons').json2html(data, transform);
+			});
 
 		</script>
 		<div style="clear:both"></div>
@@ -461,14 +462,14 @@
 	</div>
 
 </div>
-<hr> 
-	
-	<script>
-		$("#local").click(function(){
-    $(".nw-N").css( {"visibility": "visible", "display": "block"} );
-});
-		$("#nationwide").click(function(){
-    $(".nw-N").css( {"visibility": "hidden", "display": "none"} );
-});
-	
-	</script>
+<hr>
+
+<script>
+	$("#local").click(function () {
+		$(".nw-N").css({ "visibility": "visible", "display": "block" });
+	});
+	$("#nationwide").click(function () {
+		$(".nw-N").css({ "visibility": "hidden", "display": "none" });
+	});
+
+</script>
